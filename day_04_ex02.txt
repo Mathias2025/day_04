@@ -1,0 +1,19 @@
+let housingList = ["Hut", "Flat", "Igloo", "House"];
+let result = findHousing("HoUse", housingList);
+
+function findHousing(housingToFind, housingList) {
+  let index = 0;
+
+  let housingToFindLower = housingToFind.toLowerCase();
+
+  while (index < housingList.length) {
+    if (housingList[index].toLowerCase() === housingToFindLower) {
+      return [index, housingList[index]];
+    }
+    index++;
+  }
+
+ 
+  return null;
+}
+displayResult(result);
